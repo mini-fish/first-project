@@ -1,0 +1,129 @@
+			body{
+				background-color: #fff;
+			}
+			a{
+				color: #666;
+			}
+			/* 顶部导航栏 */
+			.text_common{
+				font-size: 14px;
+			}
+			.nav_text{
+				font-size: 14px;
+				color: #fff;
+			}
+			.navbar .actived{
+				border-bottom:2px solid #fff ;
+			}
+			.nav_bg{
+				background-color: #000;
+			}
+			.top_head{
+				width: 100%;
+				background-color: #000;
+				height: 75px;
+				padding-top: 10px;
+				border-bottom: 1px solid #999;
+			}
+			.nav_text>li>a:hover{
+				border-bottom: 2px solid #fff;
+			}
+			/* 头 */
+			@media (min-width:768px) {
+				.my_img_w{width: 150px;height: 150px;}
+			}
+			@media (max-width:767.99px) {
+				.my_img_w{width: 90px;height: 90px;}
+			}
+			.border-1{
+				border: 1px solid #999;
+			}
+			.text_small{
+			font-size: 12px;	
+			}
+			.text_md{
+			font-size: 14px;	
+			}
+			.bg-secondary{
+				background-color: #777 !important;
+				border-radius: 0.3rem;
+			}
+			.my_border-l{
+				border-left: 1px dashed #bbb;
+			}
+			 @media (max-width:767.99px)  {
+			 	.my_d_sm_play{
+					border: 0;
+				}
+				.my_d_sm_play{
+					margin-top: 20px;
+				}
+				.my_d_sm_play li{
+					margin-right:0.5rem ;
+				}
+				.my_d_sm_play i{
+					margin-right: 0.25rem;
+				}
+				.my_d_sm_play a{
+					font-size: 12px;
+				}
+			 }
+			 .my_box_shdow{
+				 box-shadow: 0px 0px 10px #000 ;
+			 }
+/* 中部内容区 */
+
+			
+			/* 图片下的翻页圆点 */
+			.page>ul{
+				margin-bottom: 100px;
+			}
+			.page>ul>li{
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				background-color: #999;
+				color: #fff;
+				text-align: center;
+				margin-left: 12px;
+			}
+			.page .active{
+				background-color: #fff;
+				color: #666;
+			}
+			.bg-gray{
+				background-color: #ccc !important;
+				color: #fff !important;
+			}
+			.bg-gray:hover{
+				background-color: #0069D9 !important;
+			}
+			/* 底部区域 */
+			.footer{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				background-color: #000;
+			}
+			.footer .text_ccc{
+				color: #ccc;
+			}
+			.footer a{
+				font-size: 12px;
+				text-decoration: none;
+			}
+			.footer .footer_top a{
+				color: #ccc;
+			}
+	
+			.footer .footer_center p{
+				font-size: 12px;
+				margin: 0;
+			}
+			.footer .footer_bottom p{
+				font-size: 12px;
+				margin: 0;
+			}
+			.footer .border-t{
+				border-top: 1px solid #999;
+			}

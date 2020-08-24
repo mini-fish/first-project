@@ -1,0 +1,511 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style type="text/css">
+			body{
+				background-color: #434343;
+			}
+			.text_common{
+				font-size: 14px;
+			}
+			.nav_text{
+				font-size: 14px;
+				color: #fff;
+			}
+			.navbar .actived{
+				border-bottom:2px solid #fff ;
+			}
+			.nav_bg{
+				background-color: #000;
+			}
+			.top_head{
+				width: 100%;
+				background-color: #000;
+				height: 75px;
+				padding-top: 10px;
+				border-bottom: 1px solid #999;
+			}
+			.nav_text>li>a:hover{
+				border-bottom: 2px solid #fff;
+			}
+			.top_foot{
+				width: 100%;
+				background-color: #000;
+				height: 190px;
+			}
+			.top_foot_t1{
+				font-size: 60px;
+			}
+			.top_foot_t2{
+				font-size: 24px;
+			}
+			@media (max-width:767.99px) {
+			.top_foot_t1{font-size: 40px;}
+			}
+			.box_ani:hover{
+				transform: translateY(-5px);
+				box-shadow: 0 0 0.8rem 0.5rem rgba(255, 255, 255, 0.02);
+				transition: transform 0.5s;
+			}
+			.box_size{
+				box-sizing: border-box;
+			}
+			/* 大屏以下隐藏的价格文字部分 */
+			@media (max-width:991.99px) {
+				.d_no{
+					display: none;
+				}
+			}
+			/* 图片放大 */
+/* 			.ani_scale:hover{
+				transform: scale(1.5);
+			} */
+			/* 图片上的文字 */
+			.text_fl{
+				float: right;
+				font-size: 12px;
+				border-radius: 0.25rem;
+				position: absolute;
+				right: 0.5rem;
+				top: 0.5rem;
+			}
+			/* 定位 */
+			.pos_re{
+				position: relative;
+			}
+			.mb-10{
+				margin-bottom: 100px;
+			}
+			
+			/* 图片下的翻页圆点 */
+			.page>ul{
+				margin-bottom: 100px;
+			}
+			.page>ul>li{
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				background-color: #999;
+				color: #fff;
+				text-align: center;
+				margin-left: 12px;
+			}
+			.page .active{
+				background-color: #fff;
+				color: #666;
+			}
+			/* 底部区域 */
+			.footer{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				background-color: #000;
+			}
+			.footer .text_ccc{
+				color: #ccc;
+			}
+			.footer a{
+				font-size: 12px;
+				text-decoration: none;
+			}
+			.footer .footer_top a{
+				color: #ccc;
+			}
+/* 			@media (max-width:767.99px) {
+				.col-xs-6{
+					flex: 0 0 50%;
+					flex-wrap: wrap;
+				}
+			}
+			@media (min-width:768px) {
+				.col-lg-3{
+					flex: 0 0 20%;
+					flex-wrap: wrap;
+				}
+			}	 */		
+			.footer .footer_center p{
+				font-size: 12px;
+				margin: 0;
+			}
+			.footer .footer_bottom p{
+				font-size: 12px;
+				margin: 0;
+			}
+			.footer .border-t{
+				border-top: 1px solid #999;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 顶部导航 -->
+		<div class="top_head">
+		<div class="container">
+			<div class="navbar navbar-dark nav_bg navbar-expand-lg box_size">
+				<!-- 1.永远显示的a标签 -->
+				<a class="navbar-brand" href="#">意派·CoolSITE</a>
+				<!-- 2.小屏显示，大屏隐藏的按钮 -->
+				<button data-toggle="collapse" data-target="#demo" class="navbar-toggler">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<!-- 3.折叠的内容 div.collapse>ul>li>a -->
+				<div id="demo" class="collapse navbar-collapse justify-content-end">
+					<ul class="navbar-nav nav_text ">
+						<li class="nav-item"><a class="nav-link actived" href="#">网站模板</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">模块展示</a></li>
+						<li class="nav-item"><a class="nav-link" href="pro_service.html" target="_blank">服务商</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">网站案例</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">价格</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">学习资源</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">小程序</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">登录</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">注册</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="top_foot">
+		<div class="container">
+			<div class="text-sm-left text-md-center">
+				<p class="top_foot_t1 text-primary font-weight-light">TEMPLATES</p>
+				<p class="top_foot_t2 text-light">响应式网站模板</p>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 中部内容区1 -->
+	<div class="container">
+		<div class="row no-gutters mt-5">
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/2a04febbf6160eb8c261253e9e7e1694_origin.jpg" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">厨具展示类模板</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class="text-warning font-weight-bold d_no" href="#">￥399</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/7120e9270c4b06a2bc96393bdececa3a_origin.jpg" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">茶叶企业站模板</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class="text-warning font-weight-bold d_no" href="#">￥299</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/50db5281e1711c4f99d2332eaa570092_origin.jpg" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">室内设计类模板</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class="text-warning font-weight-bold d_no" href="#">￥299</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+		</div>
+	</div>
+	<!-- 中部内容区2 -->	
+	<div class="container">
+		<div class="row no-gutters mt-5">
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/2020-08-19_205526.png" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">家居装饰展示类模板</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class="text-warning font-weight-bold d_no" href="#">￥299</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/2.png" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">旅游服务展示类模板</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class="text-warning font-weight-bold d_no" href="#">￥299</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/3.png" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">服装销售展示类模板</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class="text-warning font-weight-bold d_no" href="#">￥299</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+		</div>
+	</div>
+	<!-- 中部内容区3 -->
+	<div class="container">
+		<div class="row no-gutters mt-5">
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/3.jpg" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">锻炼健身展示类模板</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class="text-warning font-weight-bold d_no" href="#">￥399</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/4.png" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">集团类模板</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class="text-warning font-weight-bold d_no" href="#">￥299</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/5.jpg" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">艺术摄影类</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class="text-warning font-weight-bold d_no" href="#">￥299</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+		</div>
+	</div>
+	<!-- 中部内容区4 -->
+	<div class="container">
+		<div class="row no-gutters mt-5">
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/6.png" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">音响销售展示类品牌站</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class="text-warning font-weight-bold d_no" href="#">￥299</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/7.jpg" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">汽车零部件销售类网站</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class=" d_no" href="#">免费</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/9.jpg" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">新能源集团类模板</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class=" d_no" href="#">免费</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+		</div>
+	</div>
+	<!-- 中部内容区5 -->
+	<div class="container">
+		<div class="row no-gutters mt-5">
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/10.jpg" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">果蔬展示类模板</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class="d_no" href="#">免费</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/11.jpg" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">室内家居类模板</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class=" d_no" href="#">免费</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/12.png" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">CMS 2.0 教程配套案例</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class=" d_no" href="#">免费</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+		</div>
+	</div>
+	<!-- 中部内容区6 -->
+	<div class="container">
+		<div class="row no-gutters mt-5 mb-10">
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/13.png" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">简约风格模板</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class=" d_no" href="#">免费</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/14.jpg" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">会议专题模板</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class=" d_no" href="#">免费</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-12 col-md-4 box_ani">
+					<div class=" mx-md-2 pos_re">
+						<a class="text-light bg-primary px-2 py-1 text_fl" href="#"><img class="mx-1" src="image/money.png" >CMS</a>
+					<img class="w-100 ani_scale" src="image/15.png" alt="">
+					<div>
+						<h6 class="text-light px-3 my-3">展示类模板</h6>
+						<div class="d-flex justify-content-between px-3">
+							<a class=" d_no" href="#">免费</a>
+							<button class="bg-primary border-0 text-light text_common px-2 py-1 mb-2 d_no">购买模板</button>
+						</div>
+					</div>
+				</div>
+				</div>
+		</div>		
+	</div>
+
+<!-- 图片下的翻页圆点 -->
+<div class="container">
+	<div class="page">
+		<ul class="list-unstyled d-flex justify-content-center">
+			<li class="active">1</li>
+			<li>2</li>
+		</ul>
+	</div>
+</div>
+	<!-- 底部区域 -->
+	<div class="footer ">
+		<div class="container text_ccc">
+			<!-- 上 -->
+			<div class="row footer_top pt-4">
+				<div class=" col-sm-6 col-md-3 pb-2">
+					<h5>CONTACT</h5>
+					<a href="#">合作Email：jason@21epub.com</a>
+				</div>
+				<div class=" col-sm-6 col-md-3">
+					<h5>SOCIAL LINKS</h5>
+					<ul class="list-unstyled">
+						<li><i class="pr-2">></i><a href="#"> 微信：意派科技 </a><span><img src="" ></span></li>
+						<li><i class="pr-2">></i><a href="#">新浪微博：意派科技</a></li>
+						<li><i class="pr-2">></i><a href="#">QQ 3群：327040741</a></li>
+					</ul>
+				</div>
+				<div class=" col-sm-6 col-md-3">
+					<h5>LINKS</h5>
+					<ul class="list-unstyled">
+						<li><i class="pr-2">></i><a href="#">产品博客</a></li>
+						<li><i class="pr-2">></i><a href="#">网页设计教程</a></li>
+						<li><i class="pr-2">></i><a href="#">网页设计资讯</a></li>
+						<li><i class="pr-2">></i><a href="#">网页设计网址导航</a></li>
+						<li><i class="pr-2">></i><a href="#">免责声明</a></li>
+					</ul>
+				</div>
+				<div class=" col-sm-6 col-md-3">
+					<h5>PRODUCTS</h5>
+					<h6>相关产品</h6>
+					<img src="image/logo.png" >
+				</div>
+			</div>
+			
+			<!-- 中 -->
+			<div class="footer_center row justify-content-between mt-4 border-t pt-2">
+				<div class="col-sm-6 ">
+					<p>上海意派信息科技有限公司 © 2014-2018 </p>
+					<p>沪公网安备 31010502002783号 </p>
+					<p>沪ICP备13031638号</p>
+				</div>
+				<div class="col-sm-6 mt-2 text-right">
+					<p>友情链接：  企业微信 /  移动办公</p>
+				</div>
+			</div>
+			
+			<!-- 下 -->
+			<div class="footer_bottom mt-4 text-center pb-4">
+				<p>h5页面制作工具 /  h5制作工具 /  h5页面制作软件 /  微信h5页面制作软件 /  h5制作平台 /  h5页面制作 /  h5在线制作 /  制作h5的软件 /  微信h5页面制作</p>
+				<p>模块建站 /  自助建站 /  响应式网站/  响应式网站建设 /  响应式网站制作 /  响应式网站设计 /  响应式网站模板 /  微信小程序工具 /  微信小程序开发</p>
+				<p>响应式网页 /  响应式网页设计 /  响应式网页制作/  响应式网页工具 /  响应式网页模板 /  响应式网页布局 /  响应式设计 /  响应式布局 /  bootstrap</p>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
